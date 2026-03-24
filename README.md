@@ -17,6 +17,7 @@ Plugin ที่เปลี่ยน [Claude Code](https://claude.com/claude-co
 
 | คำสั่ง | ใช้ทำอะไร |
 |--------|----------|
+| `/personal-agent:session-start` | เริ่มเซสชัน — ทักทาย สรุปสถานะ เช็คงานค้าง |
 | `/personal-agent:daily-summary` | สรุปสถานะระบบประจำวัน |
 | `/personal-agent:check-services` | เช็ค Docker, CPU, memory, disk, network |
 | `/personal-agent:research [หัวข้อ]` | ค้นคว้าข้อมูลจากเว็บ |
@@ -26,10 +27,12 @@ Plugin ที่เปลี่ยน [Claude Code](https://claude.com/claude-co
 
 ## Features
 
-- **6 Skills** — ใช้งานได้ทันทีจาก Claude Code ทุก project
-- **MCP Memory** — จำข้อมูลข้ามเซสชันผ่าน Knowledge Graph
+- **Auto Memory** — จำข้อมูลสำคัญข้ามเซสชันโดยอัตโนมัติ (markdown + Knowledge Graph)
+- **On Session Start** — เปิดมาก็สรุปสถานะ + งานค้างให้เลย
+- **Folder Rules** — ไฟล์ไม่มั่วเปะปะ agent รู้ว่าอะไรวางที่ไหน
+- **MCP Memory** — จำความสัมพันธ์ระหว่างคน/โปรเจค/เทคโนโลยี
+- **9 Skills** — 7 user-invocable + 2 auto-invoked
 - **Plugin Format** — ติดตั้ง/ถอนผ่าน `/plugin` command มาตรฐาน
-- **Namespace** — skills อยู่ใน `personal-agent:` ไม่ชนกับ plugin อื่น
 
 ## Structure
 
@@ -39,6 +42,9 @@ Plugin ที่เปลี่ยน [Claude Code](https://claude.com/claude-co
 └── marketplace.json         ← marketplace catalog
 
 skills/
+├── session-start/SKILL.md   ← เริ่มเซสชัน (user-invocable)
+├── auto-memory/SKILL.md     ← บันทึก memory อัตโนมัติ (auto-invoked)
+├── folder-rules/SKILL.md    ← กฎจัดการไฟล์ (auto-invoked)
 ├── daily-summary/SKILL.md
 ├── check-services/SKILL.md
 ├── note/SKILL.md
