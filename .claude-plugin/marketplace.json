@@ -1,0 +1,22 @@
+{
+  "name": "monthop-tools",
+  "owner": {
+    "name": "monthop-gmail",
+    "email": ""
+  },
+  "metadata": {
+    "description": "Personal productivity plugins for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "personal-agent",
+      "description": "AI Personal Agent — จัดการโน้ต, TODO, ค้นคว้า, เช็คระบบ, จำข้อมูลข้ามเซสชัน",
+      "version": "0.1.0",
+      "source": ".",
+      "category": "productivity",
+      "keywords": ["personal-agent", "productivity", "notes", "todo", "research", "thai"],
+      "license": "MIT"
+    }
+  ]
+}

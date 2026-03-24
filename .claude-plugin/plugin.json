@@ -1,0 +1,13 @@
+{
+  "name": "personal-agent",
+  "version": "0.1.0",
+  "description": "AI Personal Agent — จัดการโน้ต, TODO, ค้นคว้า, เช็คระบบ, จำข้อมูลข้ามเซสชัน",
+  "author": {
+    "name": "monthop-gmail",
+    "url": "https://github.com/monthop-gmail"
+  },
+  "homepage": "https://github.com/monthop-gmail/poc-ai-personal-agent-plugin",
+  "repository": "https://github.com/monthop-gmail/poc-ai-personal-agent-plugin",
+  "license": "MIT",
+  "keywords": ["personal-agent", "productivity", "notes", "todo", "research", "thai"]
+}
